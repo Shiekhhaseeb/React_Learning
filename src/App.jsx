@@ -8,11 +8,11 @@
 //   <>
 //    <Header/>
 //    <Food/>
-   
+
 //     <Footer/>
-    
+
 //     </>
- 
+
 
 //   );
 // }
@@ -43,7 +43,7 @@
 // )
 
 // }
- 
+
 // export default App
 /*************************** */
 //How to style a component in React with css
@@ -58,7 +58,7 @@
 // return(<Button/>);
 
 // }
- 
+
 // export default App
 /***************************** */
 // import Student from "./Student.jsx";
@@ -79,16 +79,77 @@
 
 // export default App;
 /*********************************** */
-import UserGreeting from "./UserGreeting.jsx";
+// import UserGreeting from "./UserGreeting.jsx";
 
-function App() {
-  return (
-    <>
+// function App() {
+//   return (
+//     <>
 
-     <UserGreeting isLoggedIn={true} username="Brocode"/>
+//      <UserGreeting isLoggedIn={true} username="Brocode"/>
 
-    </>
-  );
-}
+//     </>
+//   );
+// }
 
-export default App;
+// export default App;
+/*********************** */
+//redering lists in React
+// import List from "./List.jsx";
+
+// function App() {
+//   const fruits = [{id: 1, name: "apple", calories: 95},
+//                   {id: 2, name: "orange", calories: 45},
+//                   {id: 3, name: "banana", calories: 105},
+//                   {id: 4, name: "coconut", calories: 159},
+//                   {id: 5, name: "pineapple", calories: 37}];
+
+//     const vegetables = [{id: 6, name: "potatoes", calories: 110},
+//                         {id: 7, name: "celery", calories: 15},
+//                         {id: 8, name: "carrots", calories: 25},
+//                         {id: 9, name: "corn", calories: 63},
+//                         {id: 10, name: "broccoli", calories: 50}];
+
+// return (
+//     <>
+//       <List items={fruits}  category="Fruits"/>
+//             <List items={vegetables}  category="vegetables"/>
+
+
+//     </>
+//   );
+
+// }
+
+// export default App;
+
+/********************** */
+//we can use conditional rendering to render our list only if there is elements in our list
+// import List from "./List.jsx";
+
+// function App() {
+//   const fruits = [{ id: 1, name: "apple", calories: 95 },
+//   { id: 2, name: "orange", calories: 45 },
+//   { id: 3, name: "banana", calories: 105 },
+//   { id: 4, name: "coconut", calories: 159 },
+//   { id: 5, name: "pineapple", calories: 37 }];
+
+//   const vegetables = [{ id: 6, name: "potatoes", calories: 110 },
+//   { id: 7, name: "celery", calories: 15 },
+//   { id: 8, name: "carrots", calories: 25 },
+//   { id: 9, name: "corn", calories: 63 },
+//   { id: 10, name: "broccoli", calories: 50 }];
+
+//   return (
+//     <>
+//       {/* {fruits.length > 0 ? <List items={fruits}  category="Fruits"/> : null}
+//       {vegetables.length > 0 ? <List items={vegetables}  category="vegetables"/> : null} */}
+
+//       {/* Easy way using &&  :--> known as short circutiong*/}
+//          {fruits.length > 0 && <List items={fruits} category="Fruits" />}
+//       {vegetables.length > 0 && <List items={vegetables} category="vegetables" />}
+//     </>
+//   );
+
+// }
+
+// export default App;

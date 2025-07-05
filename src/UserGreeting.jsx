@@ -21,7 +21,7 @@
 // export default UserGreeting;
 /**************************************/
 //Easir way to write the same code
-import './index.css'; // Add this import
+// import './index.css'; // Add this import
 function UserGreeting(props) {
 
 const welcomeMessage= <h2 className="welcome-message">
