@@ -153,3 +153,23 @@
 // }
 
 // export default App;
+/************************************ */
+//7.Click events in React
+//CLICK EVENTS :An interaction when a user clicks on an element, such as a button or link.we required to respond to click events in our application. a callback function is executed when the event occurs.
+
+import Button2 from "./Button2";
+import ProfilePicture from "./ProfilePicture";
+
+function App() {
+
+
+  return (
+    <>
+ <Button2/>
+ <ProfilePicture/>
+  </>
+  );
+
+}
+
+export default App;
