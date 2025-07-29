@@ -69,7 +69,7 @@ border: none;
 
 /*****************/
 /* render lists */
-.list-category{
+/* .list-category{
 font-size: 2.5em;
 font-weight: bold;
 color: hsl(0,0%,20%);
@@ -92,4 +92,32 @@ margin: 0;
 .list-items li:hover{
 color: hsl(0, 0%, 45%);
 cursor: pointer;
+} */
+/******************/
+.counter-container{
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin: 20px;
+
+}
+.count-display{
+  font-size: 10em;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+.counter-button{
+  width: 150px;
+  height: 50px; 
+  font-size: 1.5em;
+  font-weight: bold;
+  margin:0px 5px ;
+  background-color: hsl(185,100%,50%);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.counter-button:hover{
+  background-color: hsl(185,100%,40%);
 }

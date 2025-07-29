@@ -157,19 +157,47 @@
 //7.Click events in React
 //CLICK EVENTS :An interaction when a user clicks on an element, such as a button or link.we required to respond to click events in our application. a callback function is executed when the event occurs.
 
-import Button2 from "./Button2";
-import ProfilePicture from "./ProfilePicture";
+// import Button2 from "./Button2";
+// import ProfilePicture from "./ProfilePicture";
 
-function App() {
+// function App() {
 
 
-  return (
+//   return (
+//     <>
+//  <Button2/>
+//  <ProfilePicture/>
+//   </>
+//   );
+
+// }
+
+// export default App;
+/************************************* */
+//8.React hooks are special function that allows fxnal components
+//to use React features without writing write class components(React v16.8)
+//to use react features without writing class components (React c16.8)
+//(useState, useEffect, useContext, useReducer, useRef, useMemo, useCallback, useImperativeHandle, useDebugValue, useTransition, useId)
+
+//useState()= A React hook that allows the creation of a stateful value in a functional variable AND a setter function to update its value in the virtual DOM {name,setName}
+// import MyComponents from "./MyComponents";
+// function App(){
+//   return(
+//     <>
+    
+//     <MyComponents/>
+//     </>
+//   );
+// }
+// export default App;
+/************************ */
+//
+import Counter from "./Counter";
+function App(){
+  return(
     <>
- <Button2/>
- <ProfilePicture/>
-  </>
+    <Counter/>
+    </>
   );
-
 }
-
 export default App;
