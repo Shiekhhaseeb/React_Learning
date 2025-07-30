@@ -193,10 +193,13 @@
 /************************ */
 //
 import Counter from "./Counter";
+import MyComponents from "./MyComponents"; 
 function App(){
   return(
     <>
-    <Counter/>
+    {/* <Counter/> */}
+       <MyComponents/>
+
     </>
   );
 }
