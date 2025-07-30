@@ -36,80 +36,161 @@
 //onChange =event handler is used primarly with form  elements e.x <input> <textarea> <select> <radio> triggers a fxn every time the value of the input changes 
 
 
-import { func } from "prop-types";
+// import { func } from "prop-types";
+// import React, { useState } from "react";
+
+// function MyComponents() {
+//   const [name, setName] = useState("Guest");
+//   const [quantity, setQuantity] = useState(1);
+//   const [comment, setComment] = useState("");
+// const[payment, setPayment] = useState("visa");
+// const [shipping,setShipping] = useState("delivery");
+
+//   function handleNameChange(event) {
+//     setName(event.target.value);
+//   }
+
+//   function handleQuantityChange(event) {
+//     setQuantity(event.target.value);
+//   }
+
+//   function handleCommentChange(event) {  // ✅ Corrected name
+//     setComment(event.target.value);
+//   }
+
+//   function handlePaymentChange(event) {
+//     setPayment(event.target.value);
+//   }
+
+//   function handleShippingChange(event) {
+//     setShipping(event.target.value);
+//   }
+//   return (
+//     <div>
+//       <input value={name} onChange={handleNameChange} />
+//       <p>Name: {name}</p>
+
+//       <input value={quantity} onChange={handleQuantityChange} type="number" />
+//       <p>Quantity: {quantity}</p>
+
+//       <textarea
+//         value={comment}
+//         onChange={handleCommentChange}
+//         placeholder="Enter delivery instructions"
+//       />
+//       <p>Comment: {comment}</p>
+
+//       <select value={payment} onChange={handlePaymentChange}>
+// <option value="">Select an option</option>
+// <option value="visa">Visa</option>
+// <option value="MasterCard">MasterCard</option>
+// <option value="GiftCard">GiftCard</option>
+
+
+//       </select>
+//       <p>Payment: {payment}</p>
+
+
+// <label>
+//   <input
+//   type="radio"
+//   value="pick up"
+//   checked={shipping === "pick up"}
+//   onChange={handleShippingChange}
+//   />
+//   pick up
+// </label><br/>
+// <label>
+//   <input
+//   type="radio"
+//   value="delivery"
+//   checked={shipping === "delivery"}
+//   onChange={handleShippingChange}
+//   />
+//   Delivery
+// </label>
+// <p>Shipping: {shipping}</p>
+//     </div>
+//   );
+// }
+
+// export default MyComponents;
+/********************************* */
+// //updater function in react= is a fxn passed as an argument to setState() usually 
+// // e.g setYear(arrow function) .used when the new state depends on the previous state, allows for safe updates based in previous state used with multiple setState() calls and asynchronous fxns ,itss a good practice to use Upater fxn
+
+// import React, { useState } from "react";
+
+// function MyComponents() {
+//   const [count,setCount] = useState(0);
+
+//   function increment(){
+//     // setCount(count+1);
+//     // //update e.g (0+ 1) always 1 like refresh in browser
+//     // setCount(count+1);
+//     // //update
+//     // setCount(count+1);
+//     // //update
+// //updater fxn is stored in a queue fcfs,take thePENDING state to calculate the next state,During the next render, it will call them in the same order.
+//     setCount(prevCount+1);
+// //or take 1st letter of state variable
+// setCount(c =>c+1 )//c reps prev count
+// setCount(c =>c+1 )
+// setCount(c =>c+1 )
+
+//   }
+
+//     function decrement(){
+//     setCount(c=>c-1);
+//     setCount(c=>c-1);
+//     setCount(c=>c-1);
+
+//   }
+
+//     function reset(){
+//     setCount(c=> c =0);//we dont care about prev state
+//   }
+//   return(
+//      <div>
+
+//     </div>
+  
+//   );
+ 
+// }
+
+// export default MyComponents;
+
+/******************* */
 import React, { useState } from "react";
 
 function MyComponents() {
-  const [name, setName] = useState("Guest");
-  const [quantity, setQuantity] = useState(1);
-  const [comment, setComment] = useState("");
-const[payment, setPayment] = useState("visa");
-const [shipping,setShipping] = useState("delivery");
+  const [count, setCount] = useState(0);
 
-  function handleNameChange(event) {
-    setName(event.target.value);
+  function increment() {
+    // Correct: use updater form to ensure each update is based on latest state
+    setCount(c => c + 1);
+    setCount(c => c + 1);
+    setCount(c => c + 1);  // Total: +3
   }
 
-  function handleQuantityChange(event) {
-    setQuantity(event.target.value);
+  function decrement() {
+    setCount(c => c - 1);
+    setCount(c => c - 1);
+    setCount(c => c - 1);  // Total: -3
   }
 
-  function handleCommentChange(event) {  // ✅ Corrected name
-    setComment(event.target.value);
+  function reset() {
+    setCount(0); // No need for updater function here
   }
 
-  function handlePaymentChange(event) {
-    setPayment(event.target.value);
-  }
-
-  function handleShippingChange(event) {
-    setShipping(event.target.value);
-  }
   return (
-    <div>
-      <input value={name} onChange={handleNameChange} />
-      <p>Name: {name}</p>
-
-      <input value={quantity} onChange={handleQuantityChange} type="number" />
-      <p>Quantity: {quantity}</p>
-
-      <textarea
-        value={comment}
-        onChange={handleCommentChange}
-        placeholder="Enter delivery instructions"
-      />
-      <p>Comment: {comment}</p>
-
-      <select value={payment} onChange={handlePaymentChange}>
-<option value="">Select an option</option>
-<option value="visa">Visa</option>
-<option value="MasterCard">MasterCard</option>
-<option value="GiftCard">GiftCard</option>
-
-
-      </select>
-      <p>Payment: {payment}</p>
-
-
-<label>
-  <input
-  type="radio"
-  value="pick up"
-  checked={shipping === "pick up"}
-  onChange={handleShippingChange}
-  />
-  pick up
-</label><br/>
-<label>
-  <input
-  type="radio"
-  value="delivery"
-  checked={shipping === "delivery"}
-  onChange={handleShippingChange}
-  />
-  Delivery
-</label>
-<p>Shipping: {shipping}</p>
+    <div style={{ textAlign: "center", marginTop: "50px" }}>
+      <h2>Updater Function Counter</h2>
+      <p style={{ fontSize: "2rem" }}>Count: {count}</p>
+      <button onClick={increment} style={{ margin: "5px" }}>Increment +3</button>
+      <button onClick={decrement} style={{ margin: "5px" }}>Decrement -3</button>
+      <button onClick={reset} style={{ margin: "5px" }}>Reset</button>
     </div>
   );
 }
