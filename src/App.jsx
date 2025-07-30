@@ -192,14 +192,26 @@
 // export default App;
 /************************ */
 //
+// import Counter from "./Counter";
+// import MyComponents from "./MyComponents"; 
+// function App(){
+//   return(
+//     <>
+//     {/* <Counter/> */}
+//        <MyComponents/>
+
+//     </>
+//   );
+// }
+// export default App;
+/****************************** */
 import Counter from "./Counter";
 import MyComponents from "./MyComponents"; 
+import ColorPicker from "./ColorPicker";
 function App(){
   return(
     <>
-    {/* <Counter/> */}
-       <MyComponents/>
-
+<ColorPicker/>
     </>
   );
 }
