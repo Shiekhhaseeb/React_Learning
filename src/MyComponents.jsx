@@ -161,38 +161,76 @@
 
 // export default MyComponents;
 
-/******************* */
+/****************************************** */
+// import React, { useState } from "react";
+
+// function MyComponents() {
+//   const [count, setCount] = useState(0);
+
+//   function increment() {
+//     // Correct: use updater form to ensure each update is based on latest state
+//     setCount(c => c + 1);
+//     setCount(c => c + 1);
+//     setCount(c => c + 1);  // Total: +3
+//   }
+
+//   function decrement() {
+//     setCount(c => c - 1);
+//     setCount(c => c - 1);
+//     setCount(c => c - 1);  // Total: -3
+//   }
+
+//   function reset() {
+//     setCount(0); // No need for updater function here
+//   }
+
+//   return (
+//     <div style={{ textAlign: "center", marginTop: "50px" }}>
+//       <h2>Updater Function Counter</h2>
+//       <p style={{ fontSize: "2rem" }}>Count: {count}</p>
+//       <button onClick={increment} style={{ margin: "5px" }}>Increment +3</button>
+//       <button onClick={decrement} style={{ margin: "5px" }}>Decrement -3</button>
+//       <button onClick={reset} style={{ margin: "5px" }}>Reset</button>
+//     </div>
+//   );
+// }
+
+// export default MyComponents;
+/******************************************** */ 
+//Update OBJECTS in state
 import React, { useState } from "react";
 
 function MyComponents() {
-  const [count, setCount] = useState(0);
+//array destr
+const [car,setCar] = useState({year:2024,
 
-  function increment() {
-    // Correct: use updater form to ensure each update is based on latest state
-    setCount(c => c + 1);
-    setCount(c => c + 1);
-    setCount(c => c + 1);  // Total: +3
+                               make:"Ford",
+                               model:"Mustang"});
+
+  function handleYearChange(event){
+    // after using spread(...)operator it will look like this,but writing 2 keys twice is not allowed in js,use ... only
+
+// setCar({year:2024,make :"Ford",
+// model:"Mustang",year:2025});
+
+// setCar({...car,year:event.target.value});
+//but better is to use the arrow function
+setCar(c=>({...c,year:event.target.value}));// c = prev value
   }
-
-  function decrement() {
-    setCount(c => c - 1);
-    setCount(c => c - 1);
-    setCount(c => c - 1);  // Total: -3
+   function handleMakeChange(event){
+setCar(c =>({...c,make:event.target.value}))
   }
+    function handleModelChange(event){
 
-  function reset() {
-    setCount(0); // No need for updater function here
+setCar(c=> ({...c,model:event.target.value}));
   }
+      return(<div>
+        <p>Your favroute car is : {car.year} {car.make} {car.model}</p>
+        <input type="number" value={car.year} onChange={handleYearChange}/><br/>
+        <input type="text" value={car.make} onChange={handleMakeChange}/><br/>
+        <input type="text" value={car.model} onChange={handleModelChange}/><br/>
 
-  return (
-    <div style={{ textAlign: "center", marginTop: "50px" }}>
-      <h2>Updater Function Counter</h2>
-      <p style={{ fontSize: "2rem" }}>Count: {count}</p>
-      <button onClick={increment} style={{ margin: "5px" }}>Increment +3</button>
-      <button onClick={decrement} style={{ margin: "5px" }}>Decrement -3</button>
-      <button onClick={reset} style={{ margin: "5px" }}>Reset</button>
-    </div>
-  );
+      </div>);
+
 }
-
-export default MyComponents;
+export default MyComponents
