@@ -236,42 +236,81 @@
 // export default MyComponents
 /********************************* */
 //Update ARRAYS in state
+// import React, { useState } from "react";
+
+// function MyComponents() {
+// //array destr
+// const [foods,setFoods ] = useState(["apple","orange","banana"]);
+
+// function handleAddFood(){
+
+// const newFood = document.getElementById("foodInput").value;
+// document.getElementById("foodInput").value= "";//resets the input
+// //pass new array
+// //setFoods(["apple","orange","banana",newFood])
+// //the above works like spread operator, ... is better to use
+
+// // setFoods([...foods,newFood])
+// //better to use updater fxn
+// setFoods(f=>([...f,newFood]));//f is prev state
+// }
+// function handlerRemoveFood(index){
+
+// setFoods(foods.filter((_,i)=> i!==index));// parameter passed to fxn/element=_ means its ignored as we are not using it
+// }
+//       return(<div>
+  
+// <h2>
+//   List of Food
+// </h2>
+// <ul>
+//   {foods.map((food,index)=>
+//   <li key={index} onClick={() => handlerRemoveFood(index)}>
+//     {food}
+//     </li>)}
+// </ul>
+// <input type="text" id="foodInput" placeholder="Enter food name"/>
+// <button onClick={handleAddFood}>Add Food</button>
+//       </div>);
+
+// }
+// export default MyComponents
+
+/************************ */
 import React, { useState } from "react";
 
 function MyComponents() {
 //array destr
-const [foods,setFoods ] = useState(["apple","orange","banana"]);
+const [cars,setCars ] = useState([]);
+const [carYear,setCarYear] = useState(new Date().getFullYear());
+const [carMake,setCarMake] = useState("");
+const [carModel,setCarModel] = useState("");
 
-function handleAddFood(){
+function handleAddCar(){  
 
-const newFood = document.getElementById("foodInput").value;
-document.getElementById("foodInput").value= "";//resets the input
-//pass new arraw
-//setFoods(["apple","orange","banana",newFood])
-//the above works like spread operator, ... is better to use
-
-// setFoods([...foods,newFood])
-//better to use updater fxn
-setFoods(f=>([...f,newFood]));//f is prev state
 }
-function handlerRemoveFood(index){
+function handleRemoveCar(index){
 
-setFoods(foods,filter((_,i)=> i!==index));// parameter passed to fxn/element=_ means its ignored
+}
+function handleYearChange(event){
+
+}
+
+function hadleMakeChange(event){
+
+}
+
+function hadleModelChange(event){
+
 }
       return(<div>
   
-<h2>
-  List of Food
-</h2>
+<h1>List of car objects</h1>
 <ul>
-  {foods.map((food,index)=>
-  <li key={index} onClick={() => handlerRemoveFood(index)}>
-    {food}
-    </li>)}
+
 </ul>
-<input type="text" id="foodInput" placeholder="Enter food name"/>
-<button onClick={handleAddFood}>Add Food</button>
-      </div>);
+<input type="number" value={carYear} onChange={handleYearChange}/>
+</div>);
 
 }
 export default MyComponents

@@ -206,13 +206,16 @@
 // export default App;
 /****************************** */
 import Counter from "./Counter";
-import MyComponents from "./MyComponents"; 
+import MyComponents from "./MyComponents1"; 
+import MyComponents2 from "./MyComponents2"; 
+
 import ColorPicker from "./ColorPicker";
 function App(){
   return(
     <>
 {/* <ColorPicker/> */}
-      <MyComponents/>
+            <MyComponents2/>
+
 
     </>
   );
