@@ -198,38 +198,79 @@
 // export default MyComponents;
 /******************************************** */ 
 //Update OBJECTS in state
+// import React, { useState } from "react";
+
+// function MyComponents() {
+// //array destr
+// const [car,setCar] = useState({year:2024,
+
+//                                make:"Ford",
+//                                model:"Mustang"});
+
+//   function handleYearChange(event){
+//     // after using spread(...)operator it will look like this,but writing 2 keys twice is not allowed in js,use ... only
+
+// // setCar({year:2024,make :"Ford",
+// // model:"Mustang",year:2025});
+
+// // setCar({...car,year:event.target.value});
+// //but better is to use the arrow function
+// setCar(c=>({...c,year:event.target.value}));// c = prev value
+//   }
+//    function handleMakeChange(event){
+// setCar(c =>({...c,make:event.target.value}))
+//   }
+//     function handleModelChange(event){
+
+// setCar(c=> ({...c,model:event.target.value}));
+//   }
+//       return(<div>
+//         <p>Your favroute car is : {car.year} {car.make} {car.model}</p>
+//         <input type="number" value={car.year} onChange={handleYearChange}/><br/>
+//         <input type="text" value={car.make} onChange={handleMakeChange}/><br/>
+//         <input type="text" value={car.model} onChange={handleModelChange}/><br/>
+
+//       </div>);
+
+// }
+// export default MyComponents
+/********************************* */
+//Update ARRAYS in state
 import React, { useState } from "react";
 
 function MyComponents() {
 //array destr
-const [car,setCar] = useState({year:2024,
+const [foods,setFoods ] = useState(["apple","orange","banana"]);
 
-                               make:"Ford",
-                               model:"Mustang"});
+function handleAddFood(){
 
-  function handleYearChange(event){
-    // after using spread(...)operator it will look like this,but writing 2 keys twice is not allowed in js,use ... only
+const newFood = document.getElementById("foodInput").value;
+document.getElementById("foodInput").value= "";//resets the input
+//pass new arraw
+//setFoods(["apple","orange","banana",newFood])
+//the above works like spread operator, ... is better to use
 
-// setCar({year:2024,make :"Ford",
-// model:"Mustang",year:2025});
+// setFoods([...foods,newFood])
+//better to use updater fxn
+setFoods(f=>([...f,newFood]));//f is prev state
+}
+function handlerRemoveFood(index){
 
-// setCar({...car,year:event.target.value});
-//but better is to use the arrow function
-setCar(c=>({...c,year:event.target.value}));// c = prev value
-  }
-   function handleMakeChange(event){
-setCar(c =>({...c,make:event.target.value}))
-  }
-    function handleModelChange(event){
-
-setCar(c=> ({...c,model:event.target.value}));
-  }
+setFoods(foods,filter((_,i)=> i!==index));// parameter passed to fxn/element=_ means its ignored
+}
       return(<div>
-        <p>Your favroute car is : {car.year} {car.make} {car.model}</p>
-        <input type="number" value={car.year} onChange={handleYearChange}/><br/>
-        <input type="text" value={car.make} onChange={handleMakeChange}/><br/>
-        <input type="text" value={car.model} onChange={handleModelChange}/><br/>
-
+  
+<h2>
+  List of Food
+</h2>
+<ul>
+  {foods.map((food,index)=>
+  <li key={index} onClick={() => handlerRemoveFood(index)}>
+    {food}
+    </li>)}
+</ul>
+<input type="text" id="foodInput" placeholder="Enter food name"/>
+<button onClick={handleAddFood}>Add Food</button>
       </div>);
 
 }
