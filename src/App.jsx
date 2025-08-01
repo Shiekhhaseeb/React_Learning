@@ -210,12 +210,14 @@ import MyComponents from "./MyComponents1";
 import MyComponents2 from "./MyComponents2"; 
 
 import ColorPicker from "./ColorPicker";
+import ToDoList from "./ToDoList";
 function App(){
   return(
     <>
 {/* <ColorPicker/> */}
-            <MyComponents2/>
+            {/* <MyComponents2/> */}
 
+<ToDoList/>
 
     </>
   );
