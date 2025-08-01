@@ -171,7 +171,7 @@ input[type="color"]{/*attribiute selector*/
  /******************************/
  /* To do list  */
  body{
-  background-color: hsl(0%, 0%, 10%);
+  background-color: black;
  }
  .to-do-list{
   font-family: Arial, sans-serif;
