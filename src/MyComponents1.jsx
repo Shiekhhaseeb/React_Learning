@@ -277,40 +277,78 @@
 // export default MyComponents
 
 /************************ */
-import React, { useState } from "react";
+// import React, { useState } from "react";
 
-function MyComponents() {
-//array destr
-const [cars,setCars ] = useState([]);
-const [carYear,setCarYear] = useState(new Date().getFullYear());
-const [carMake,setCarMake] = useState("");
-const [carModel,setCarModel] = useState("");
+// function MyComponents() {
+// //array destr
+// const [cars,setCars ] = useState([]);
+// const [carYear,setCarYear] = useState(new Date().getFullYear());
+// const [carMake,setCarMake] = useState("");
+// const [carModel,setCarModel] = useState("");
 
-function handleAddCar(){  
+// function handleAddCar(){  
 
-}
-function handleRemoveCar(index){
+// }
+// function handleRemoveCar(index){
 
-}
-function handleYearChange(event){
+// }
+// function handleYearChange(event){
 
-}
+// }
 
-function hadleMakeChange(event){
+// function hadleMakeChange(event){
 
-}
+// }
 
-function hadleModelChange(event){
+// function hadleModelChange(event){
 
-}
-      return(<div>
+// }
+//       return(<div>
   
-<h1>List of car objects</h1>
-<ul>
+// <h1>List of car objects</h1>
+// <ul>
 
-</ul>
-<input type="number" value={carYear} onChange={handleYearChange}/>
-</div>);
+// </ul>
+// <input type="number" value={carYear} onChange={handleYearChange}/>
+// </div>);
 
-}
-export default MyComponents
+// }
+// export default MyComponents
+
+/************************************************/
+// //useEffect()=USE SIDE CODE
+// //useEffect() = React Hook that tells React DOM do some code when(pick one):
+//                           //This component is rendered
+//                           //This component is mounts
+//                           //The  state of a value
+// //useEffect(function,[dependencies])
+// //1.useEffect(()=>{})     //Runs after every re-render
+// //2.useEffect(()=>{},[])  //Runs only on mount
+// //3.useEffect(()=>{},[value])//Runs on mount and when value changes
+
+// //uses:--->
+// //1.Event Listerers
+// //2. DOM manipulation
+// //3.Subscriptions (real-time updates)
+// //4.Fetching Data from an API
+// //5.Clean up when a component is unmounted(removing component from the DOM)
+
+// import { func } from "prop-types";
+// import React, { useState ,useEffect} from "react";
+
+// function MyComponents() {
+//       const[count,setCount] = useState(0);
+
+// function addCount(){
+//   setCount(c => c + 1);
+
+// }
+
+
+//       return(<div>
+//   <p>Count: {count}</p>
+// <button onClick={addCount}>Add</button>
+// </div>);
+
+// }
+// export default MyComponents

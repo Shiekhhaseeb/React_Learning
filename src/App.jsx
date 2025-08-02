@@ -205,21 +205,35 @@
 // }
 // export default App;
 /****************************** */
-import Counter from "./Counter";
-import MyComponents from "./MyComponents1"; 
-import MyComponents2 from "./MyComponents2"; 
+// import Counter from "./Counter";
+// import MyComponents from "./MyComponents1"; 
+// import MyComponents2 from "./MyComponents2"; 
 
-import ColorPicker from "./ColorPicker";
-import ToDoList from "./ToDoList";
-function App(){
-  return(
+// import ColorPicker from "./ColorPicker";
+// import ToDoList from "./ToDoList";
+// import UseEffectHook from "./UseEffectHook";
+// function App(){
+//   return(
+//     <>
+// {/* <ColorPicker/> */}
+//             {/* <MyComponents2/> */}
+
+// {/* <ToDoList/> */}
+//  {/* <MyComponents1/>  */}
+//  <UseEffectHook/>
+//     </>
+//   );
+// }
+// export default App;
+/**************************** */
+import UseEffectHook from "./UseEffectHook";
+
+function App() {
+  return (
     <>
-{/* <ColorPicker/> */}
-            {/* <MyComponents2/> */}
-
-<ToDoList/>
-
+      <UseEffectHook />
     </>
   );
 }
+
 export default App;

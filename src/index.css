@@ -170,7 +170,7 @@ input[type="color"]{/*attribiute selector*/
 } */ 
  /******************************/
  /* To do list  */
- body{
+ /* body{
   background-color: black;
  }
  .to-do-list{
@@ -178,8 +178,8 @@ input[type="color"]{/*attribiute selector*/
   text-align: center;
   margin-top: 100px;
 
- }
- h1{
+ } */
+ /* h1{
   font-size: 4rem;
   color: white;
  }
@@ -193,8 +193,8 @@ input[type="color"]{/*attribiute selector*/
   cursor: pointer;
   margin: 10px;
   transition: background-color 0.3s ease;
- }
- .add-button{
+ } */
+ /* .add-button{
   background-color: hsl(125, 47%, 50%);
  }
 
@@ -208,17 +208,17 @@ input[type="color"]{/*attribiute selector*/
 
   .delete-button:hover{
   background-color: hsl(10, 90%, 40%);
- }
+ } */
 
 
-  .move-button{
+  /* .move-button{
   background-color: hsl(207, 90%, 64%);
  }
 
   .move-button:hover{
     /* 10% darker  end 54%*/
-  background-color: hsl(207, 90%, 54%); 
- }
+  /*background-color: hsl(207, 90%, 54%); 
+ } 
 
 
  input[type="text"]{
@@ -255,4 +255,4 @@ padding: 8px 12px;
 font-size: 1.4rem;
 margin-left: 10px;
 }
-
+*/
