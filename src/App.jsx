@@ -238,12 +238,29 @@
 
 // export default App;
 /********************** */
-import MyComponent from "./MyComponent";
+// import MyComponent from "./MyComponent";
+
+// function App() {
+//   return (
+//     <>
+//       <MyComponent />
+//     </>
+//   );
+// }
+
+// export default App;
+///////////////////
+import DigitalClock from "./DigitalClock";
 
 function App() {
   return (
     <>
-      <MyComponent />
+      <DigitalClock />
+            <DigitalClock />
+      <DigitalClock />
+            <DigitalClock />
+
+
     </>
   );
 }
