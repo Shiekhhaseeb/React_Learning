@@ -226,12 +226,24 @@
 // }
 // export default App;
 /**************************** */
-import UseEffectHook from "./UseEffectHook";
+// import UseEffectHook from "./UseEffectHook";
+
+// function App() {
+//   return (
+//     <>
+//       <UseEffectHook />
+//     </>
+//   );
+// }
+
+// export default App;
+/********************** */
+import MyComponent from "./MyComponent";
 
 function App() {
   return (
     <>
-      <UseEffectHook />
+      <MyComponent />
     </>
   );
 }
