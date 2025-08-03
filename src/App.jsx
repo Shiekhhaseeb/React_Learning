@@ -250,17 +250,47 @@
 
 // export default App;
 ///////////////////
-import DigitalClock from "./DigitalClock";
+// import DigitalClock from "./DigitalClock";
+
+// function App() {
+//   return (
+//     <>
+//       <DigitalClock />
+//             <DigitalClock />
+//       <DigitalClock />
+//             <DigitalClock />
+
+
+//     </>
+//   );
+// }
+
+// export default App;
+/******************************** */
+//useContext()= 
+//A React hook that allows the creation of a context for sharing stateful values between multiple components without passing props manually at every level
+//Note :--> Sharing the props down the component tree is called prop drilling.
+
+//PROVIER COMPONENT
+//1.import {createContext} from "react";
+//2.export const MyContext = createContext();
+//3.<MYContext.Provider value={value}>
+// <Child/>
+// </MyContext.Provider>
+
+//CONSUMER COMPONENT
+//1. import React,{useContext} from "react";
+//   import {MyContext} from "./ComponentA";
+//2.const value =useContext(MyContext);
+
+
+import React from "react";
+import ComponentA from "./ComponentA";
 
 function App() {
   return (
     <>
-      <DigitalClock />
-            <DigitalClock />
-      <DigitalClock />
-            <DigitalClock />
-
-
+      <ComponentA />
     </>
   );
 }

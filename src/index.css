@@ -260,9 +260,7 @@ margin-left: 10px;
 /* //Digital clock// */
 
 
-
-
-body{
+/* body{
 background-image: url(Natural.jpg);
 background-position: center;
 background-repeat: no-repeat;
@@ -271,24 +269,30 @@ background-attachment: fixed;
 margin: 0;
 /*OPTIONAL CSS*/
 
-display: flex;
+/* display: flex;
 justify-content: center;
 min-height: 100vh;
 align-items: center;
-}
+} */
 
 
-.clock-container{
+/* .clock-container{
 
 backdrop-filter: blur(5px);
 width: 100vw;
 padding: 10px 0;
-}
-.clock{
+} */
+/* .clock{
 color: white;
 font-size: 6rem;
 font-weight: bold;
 font-family: monospace;
 text-align: center;
 text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+} */ 
+
+/*********************************/
+.box{
+  border: 2px solid black;
+  padding :25px;
 }
