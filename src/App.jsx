@@ -298,13 +298,29 @@
 // export default App;
 
 /************************* */
+// import React from "react";
+// import UseRefExample from "./UseRefExample";
+
+// function App() {
+//   return (
+//     <>
+//       <UseRefExample />
+//     </>
+//   );
+// }
+
+// export default App;
+
+/******************** */
 import React from "react";
-import UseRefExample from "./UseRefExample";
+import StopWatch from "./StopWatch"; // ✅ correct import
 
 function App() {
   return (
     <>
-      <UseRefExample />
+      <StopWatch /> {/* ✅ correct usage */}
+         <StopWatch />
+            <StopWatch />
     </>
   );
 }
