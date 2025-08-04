@@ -284,13 +284,27 @@
 //2.const value =useContext(MyContext);
 
 
+// import React from "react";
+// import ComponentA from "./ComponentA";
+
+// function App() {
+//   return (
+//     <>
+//       <ComponentA />
+//     </>
+//   );
+// }
+
+// export default App;
+
+/************************* */
 import React from "react";
-import ComponentA from "./ComponentA";
+import UseRefExample from "./UseRefExample";
 
 function App() {
   return (
     <>
-      <ComponentA />
+      <UseRefExample />
     </>
   );
 }
